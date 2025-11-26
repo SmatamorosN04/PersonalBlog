@@ -107,10 +107,10 @@ main{
 }
 .main-info-container button{
     height: 40px;
-    width: 90px;
+    width: 120px;
     margin-top: 45px;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 18px;
     background-color: wheat;
     border-radius: 3px;
     border: 1px whitesmoke;
