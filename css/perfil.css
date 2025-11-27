@@ -1,4 +1,7 @@
-
+*{
+    margin:0;
+    padding: 0;
+}
 body{
     padding: 0;
     margin: 0;
@@ -9,15 +12,7 @@ body{
     overflow-y: scroll;
     box-sizing: border-box;
         font-family: 'DM sans', 'sans-serif';
-}
-*{
-    margin:0;
-    padding: 0;
-}
-a{
-    text-decoration: none;
-    display: inline;
-    color: black;
+
 }
 header {
     width: 100%;
@@ -70,49 +65,76 @@ nav .profile-link a{
     border-bottom: 1px solid black;
     text-decoration: none;
 }
-
 main{
     width: 100%;
     height: 100%;
 }
-.section-image-container{
+.presentation-container{
     width: 100%;
-    height: 500px;
-     margin-bottom: 50px;
-
+    height: 380px;
+    background-color: lightgray;
+   
 }
-
-.image-container{
-    width: 95%;
+.presentation-info{
+    width: 70%;
     height: 100%;
     margin: 0 auto;
+     display: flex;
+    flex-direction: row;
 }
-.image-container img{
-    width: 100%;
+.presentation-profilephoto--container{
+    width: 900px;
     height: 100%;
+    align-items: center;
+    justify-items: center;
 }
-.main-article--container{
-    width: 80%;
-    height: auto;
-    margin: 0 auto;
-}
-
-.article--subtitle{
-    text-align: left;
-    font-size: 1.1rem;
-    margin-bottom: 40px;
+.presentation-profilephoto--container .profilephoto{
+    margin-top: 40px;
+    background-image: url('/assets/img/pimguino.jfif');
+    width: 300px;
+    height: 300px;
     
 }
-.detail-article--container{
-    border-top: 1px solid #1A2A4F;
+.presentation-info--container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
 }
-.detail-article--container h1{
-    margin-top: 20px;
-    margin-bottom: 20px;
+.presentation-info--container h2{
+    padding-bottom: 20px;
+    font-size: 1.8rem;
 }
-.detail-article--container p{
+.presentation-info--container p{
+    font-weight: 500;
+    line-height: 25px;
+}
+.presentation-info--container p::first-letter{
+    font-size: 40px;
+}
+.project-title--container{
+    width: 40%;
+    height: 120px;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.project-info--container{
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    border-top: 1px solid #47cfac;
+    margin-bottom: 50px;
+}
+
+.project-informatiom{
+    margin-top: 40px;
+    padding: 20px;
     text-align: justify;
-    padding: 10px;
 }
 .main-contact-container{
     width: 100%;
@@ -231,9 +253,10 @@ footer{
     
 }
 
-@media (max-width: 320px){
-     * {
+@media (max-width:320px){
+    * {
         box-sizing: border-box;
+        max-width: 100%;
     }
     
     body {
@@ -253,9 +276,7 @@ footer{
         padding: 5px 0;
         min-height: 40px;
     }
-    h3{
-        line-height: 20px ;
-    }
+    
     header .header-icons-container .icons {
         width: 100%;
         margin-right: 0;
@@ -263,7 +284,7 @@ footer{
         flex-wrap: wrap;
         gap: 5px;
         padding: 3px;
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
     
     nav {
@@ -277,11 +298,11 @@ footer{
     
     nav .nav-logo-container {
         margin: 8px auto;
-        padding: 0 10px;
+        padding: 0 5px;
     }
     
     nav .nav-logo-container img {
-        width: 140px;
+        width: 130px;
         margin-top: 3px;
         height: auto;
     }
@@ -289,67 +310,94 @@ footer{
     nav .profile-link {
         justify-content: center;
         margin: 8px 0;
-        padding: 0 10px;
+        padding: 0 5px;
     }
     
     nav .profile-link a {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         max-width: 100%;
     }
     
-    .section-image-container {
-        height: 200px;
-        margin-bottom: 20px;
+    .presentation-container {
+        height: auto;
+        padding: 20px 0;
         width: 100%;
         overflow: hidden;
     }
     
-    .image-container {
+    .presentation-info {
         width: 95%;
-        height: 100%;
-        margin: 0 auto;
-        overflow: hidden;
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 10px;
     }
     
-    .image-container img {
+    .presentation-profilephoto--container {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+        height: auto;
+        display: flex;
+        justify-content: center;
     }
     
-    .main-article--container {
-        width: 95%;
-        padding: 0 5px;
-        margin: 0 auto;
+    .presentation-profilephoto--container .profilephoto {
+        margin-top: 15px;
+        width: 150px;
+        height: 150px;
+        background-size: cover;
+        background-position: center;
     }
     
-    .article--subtitle {
-        font-size: 0.9rem;
-        margin-bottom: 20px;
+    .presentation-info--container {
+        align-items: center;
         text-align: center;
-        padding: 0 5px;
-    }
-    
-    .detail-article--container {
         width: 100%;
         padding: 0 5px;
     }
     
-    .detail-article--container h1 {
+    .presentation-info--container h2 {
+        padding-bottom: 15px;
         font-size: 1.3rem;
-        margin: 12px 0;
-        text-align: center;
+        margin: 0;
+    }
+    
+    .presentation-info--container p {
+        font-size: 0.85rem;
+        line-height: 20px;
         padding: 0 5px;
     }
     
-    .detail-article--container p {
-        padding: 6px 8px;
+    .presentation-info--container p::first-letter {
+        font-size: 25px;
+    }
+    
+    .project-title--container {
+        width: 95%;
+        height: auto;
+        padding: 15px 0;
+    }
+    
+    .project-title--container h2 {
+        font-size: 1.4rem;
+        padding: 0 10px;
+    }
+    
+    .project-info--container {
+        width: 95%;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px 0;
+        margin-bottom: 30px;
+        border-top: 1px solid #47cfac;
+    }
+    
+    .project-informatiom {
+        margin-top: 0;
+        padding: 15px 10px;
         font-size: 0.85rem;
-        text-align: left;
-        line-height: 1.4;
+        line-height: 20px;
     }
     
     .main-contact-container {
